@@ -1,0 +1,181 @@
+/* 在主页的样式去引入公共的样式文件 */
+
+@import 'base.less';
+//rgb(222, 24, 27)
+
+html{
+    font-size: 100px;
+}
+
+body{
+    max-width: 7.5rem;
+    margin: 0 auto;
+    font-size: 0.16rem;
+}
+#header {
+    padding: 0.07rem 0.1rem;
+}
+
+#slide {
+    img {
+        width: 100%;
+    }
+}
+
+#nav {
+    >ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.1rem;
+        >li {
+            width: 25%;
+            >a {
+                display: block;
+                text-align: center;
+                >img {
+                    width: 0.4rem;
+                    height: 0.4rem;
+                }
+                >p {
+                    font-size: 0.14rem;
+                    line-height: 0.3rem;
+                }
+            }
+        }
+    }
+}
+
+#main {
+    background-color: #f5f5f5;
+    padding: 0.1rem;
+    padding-bottom: 0.6rem;
+    #seckill {
+        background-color: #fff;
+        box-shadow: 0px 0px 0.01rem #ccc;
+        .title {
+            display: flex;
+            line-height: 0.3rem;
+            position: relative;
+            .naozhong {
+                width: 0.2rem;
+                height: 0.25rem;
+                margin-left: 0.05rem;
+                margin-top: 0.02rem;
+            }
+            .name {
+                margin-left: 0.1rem;
+            }
+            .down-time {
+                margin-left: 0.1rem;
+                >span {
+                    display: inline-block;
+                    width: 0.15rem;
+                    height: 0.15rem;
+                    line-height: 0.15rem;
+                    background-color: #000;
+                    color: #fff;
+                    text-align: center;
+                    &:nth-of-type(3n) {
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+            }
+            .more {
+                position: absolute;
+                right: 0.1rem;
+                font-size: 0.14rem;
+            }
+        }
+        .content {
+            >ul {
+                display: flex;
+                >li {
+                    flex: 1;
+                    >a {
+                        display: block;
+                        text-align: center;
+                        >img {
+                            width: 1.1rem;
+                        }
+                        >p {
+                            font-size: 0.12rem;
+                            &:nth-of-type(1) {
+                                color: @main-color;
+                            }
+                            &:nth-of-type(2) {
+                                color: @border-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#market {
+    margin-top: 0.1rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 0.01rem #ccc;
+    .title {
+        >h4 {
+            font-weight: normal;
+            line-height: 0.3rem;
+            padding-left: 0.35rem;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0.04rem;
+                height: 0.15rem;
+                background-color: @main-color;
+                left: 0.15rem;
+                top: 0.07rem;
+            }
+        }
+    }
+    .content {
+        display: flex;
+        .left {
+            flex: 1;
+            >a {
+                display:block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+        .right {
+            flex: 1;
+            >a {
+                display:block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#footer{
+    position:fixed;
+    max-width: 7.5rem;
+    bottom: 0px;
+    width: 100%;
+    background-color: #fff;
+    ul{
+        display:flex;
+        li{
+            flex:1;
+            a{
+                display:block;
+                text-align:center;
+                img{
+                    width: 0.65rem;
+                    height: 0.5rem;
+                }
+            }
+        }
+    }
+}

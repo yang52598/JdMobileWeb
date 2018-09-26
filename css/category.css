@@ -1,0 +1,235 @@
+/* 公共变量 */
+/* 样式重置 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+  box-sizing: border-box;
+  /* 去除移动端按住元素的时候会出现高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有移动端内边框 */
+  outline: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input {
+  border: 0;
+}
+img {
+  /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+/* 公共样式 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+[class^='icon-'],
+[class*=' icon-'] {
+  background-image: url(../images/sprites.png);
+  background-size: 2rem 2rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+.border-left {
+  border-left: solid 1px #ccc;
+}
+.border-right {
+  border-right: solid 1px #ccc;
+}
+.border-top {
+  border-top: solid 1px #ccc;
+}
+.border-bottom {
+  border-bottom: solid 1px #ccc;
+}
+#header {
+  max-width: 7.5rem;
+  display: flex;
+  position: fixed;
+  background-color: rgba(222, 24, 27, 0);
+  z-index: 999;
+  width: 100%;
+}
+#header .icon-logo {
+  display: block;
+  width: 0.78rem;
+  height: 0.23rem;
+  margin-top: 0.03rem;
+  background-position: 0 -1.1rem;
+  padding: 0 0.1rem;
+}
+#header > form {
+  flex: 1;
+  margin-left: 0.1rem;
+  position: relative;
+}
+#header > form .icon-search {
+  position: absolute;
+  width: 0.2rem;
+  height: 0.2rem;
+  left: 0.05rem;
+  top: 0.06rem;
+  background-position: -0.6rem -1.1rem;
+}
+#header > form > input {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 15px;
+  padding-left: 0.3rem;
+}
+#header .login {
+  width: 0.6rem;
+  line-height: 0.3rem;
+  text-align: center;
+  color: #fff;
+}
+#footer {
+  position: fixed;
+  z-index: 999;
+  max-width: 7.5rem;
+  bottom: 0px;
+  width: 100%;
+  background-color: #fff;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+}
+#footer ul li a {
+  display: block;
+  text-align: center;
+}
+#footer ul li a img {
+  width: 0.65rem;
+  height: 0.5rem;
+}
+html,
+body {
+  height: 100%;
+  font-size: 100px;
+}
+body {
+  padding: 0.4rem 0 0.5rem;
+  font-size: 0.16rem;
+}
+#header {
+  background-color: #f5f5f5;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0px;
+  height: 0.4rem;
+}
+#header > a {
+  width: 0.4rem;
+  height: 0.4rem;
+  display: block;
+  padding: 0.1rem;
+}
+#header > a.icon-back {
+  background-position: -0.2rem 0;
+}
+#header > a.icon-menu {
+  background-position: -0.6rem 0;
+}
+#header form {
+  flex: 1;
+  padding-top: 0.05rem;
+  position: relative;
+}
+#header form .icon-search {
+  position: absolute;
+  left: 0.05rem;
+  top: 0.1rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  background-position: -0.6rem -1.1rem;
+}
+#header form > input {
+  height: 0.3rem;
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 0.3rem;
+}
+#main {
+  display: flex;
+  height: 100%;
+}
+#main .category-left {
+  width: 0.85rem;
+  height: 100%;
+  overflow: hidden;
+}
+#main .category-left .swiper-container {
+  height: 100%;
+}
+#main .category-left .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .category-left .swiper-container .swiper-slide ul {
+  background-color: #f5f5f5;
+}
+#main .category-left .swiper-container .swiper-slide ul li > a {
+  width: 0.85rem;
+  height: 0.46rem;
+  line-height: 0.46rem;
+  font-size: 0.12rem;
+  text-align: center;
+  display: block;
+}
+#main .category-left .swiper-container .swiper-slide ul li.active > a {
+  color: #e93b3d;
+  background-color: #fff;
+}
+#main .category-right {
+  flex: 1;
+  padding: 0.1rem;
+  height: 100%;
+  overflow: hidden;
+}
+#main .category-right .swiper-container {
+  height: 100%;
+}
+#main .category-right .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .category-right .swiper-container .swiper-slide #branchList .jd-brand .title > h4 {
+  font-size: 0.14rem;
+}
+#main .category-right .swiper-container .swiper-slide #branchList .jd-brand .content > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main .category-right .swiper-container .swiper-slide #branchList .jd-brand .content > ul > li {
+  width: 33.33%;
+  margin: 0.1rem 0;
+}
+#main .category-right .swiper-container .swiper-slide #branchList .jd-brand .content > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#main .category-right .swiper-container .swiper-slide #branchList .jd-brand .content > ul > li > a > img {
+  width: 0.7rem;
+}
+#main .category-right .swiper-container .swiper-slide #branchList .jd-brand .content > ul > li > a > span {
+  display: block;
+  font-size: 0.12rem;
+}
